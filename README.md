@@ -1,4 +1,3 @@
-# CPT-Work
 print('Welcome to Wald der Ratsel. Do you want to play?')
 print('Type YES if ready')
 print('Type NO if not ready')
@@ -118,7 +117,6 @@ if a=='YES':
                        print('The flame of your lighter allows you to see who')
                        print('your follower is.')
                        print(' ')
-                       print('Standing before you is a creature you have never')
                        print('Standing before you is a creature you have never')
                        print('seen before. It has a mouth full of sharp, rotting')
                        print('teeth and blood red eyes.')
@@ -262,3 +260,4 @@ if a=='YES':
             print('The woman closes the door in your face. You cannot continue')
             print('without more information.')
             print('GAME OVER')
+            
