@@ -205,8 +205,7 @@ if a=='YES':
                           print('dawns on you as you notice that determination is not')
                           print('enough when you do not have the wits to defeat the')
                           print('forest of riddles.')
-                          print('GAME OVER')
-                           
+                          print('GAME OVER'
                else:
                    print('...')
                    print('You decide to go right and fall into quick sand. You')
