@@ -17,9 +17,27 @@ while not done:
         if event.type==pygame.QUIT:
             done = True
 
-    screen.fill(WHITE)
-    pygame.display.flip()
-    clock.tick(60)
+            screen.fill(WHITE)
+            pygame.display.flip()
+            clock.tick(60)
+for event in pygame.event.get():
+    if event.type==pygame.QUIT:
+        pygame.quit()
+for event in pygame.event.get():
+    if event.type==pygame.QUIT:
+        pygame.quit()
+screen.fill(WHITE)
+pygame.display.flip()
+pygame.draw.rect(screen,GREEN,[20,20,250,100],2)
+font=pygame.font.SysFont(Calibri, 25,True,False)
+text=font.render("The Forest of Riddles",True,BLUE)
+screen.blit(text,[250,250])
+screen.fill(WHITE)
+pygame.display.flip()
+clock.tick(60)
+for event in pygame.event.get():
+    if event.type==pygame.QUIT:
+        pygame.quit()
     
 print('Welcome to Wald der Ratsel. Do you want to play?')
 print('Type YES if ready')
