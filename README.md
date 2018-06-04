@@ -6,7 +6,7 @@ WHITE=(255,255,255)
 GREEN=(0,255,0)
 RED=(255,0,0)
 BLUE=(0,0,255)
-size=(700,500)
+size=(1000,700)
 screen=pygame.display.set_mode(size)
 pygame.display.set_caption('Wald der Ratsel: The Forest of Riddles')
 done=False
