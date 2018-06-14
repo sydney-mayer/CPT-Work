@@ -38,7 +38,9 @@ clock.tick(60)
 for event in pygame.event.get():
     if event.type==pygame.QUIT:
         pygame.quit()
+        
     #IGNORE EVERYTHING BEFORE THIS COMMENT 
+    
 print('Welcome to Wald der Ratsel. Do you want to play?')
 print('Type YES if ready')
 print('Type NO if not ready')
