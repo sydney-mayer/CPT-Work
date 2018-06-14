@@ -1,50 +1,23 @@
-#http://programarcadegames.com/index.php?chapter=introduction_to_graphics
-import pygame
-pygame.init()
-BLACK=(0,0,0)
-WHITE=(255,255,255)
-GREEN=(0,255,0)
-RED=(255,0,0)
-BLUE=(0,0,255)
-size=(1000,700)
-screen=pygame.display.set_mode(size)
-pygame.display.set_caption('Wald der Ratsel: The Forest of Riddles')
-done=False
-clock=pygame.time.Clock()
-
-while not done:
-    for event in pygame.event.get():
-        if event.type==pygame.QUIT:
-            done = True
-
-            screen.fill(WHITE)
-            pygame.display.flip()
-            clock.tick(60)
-for event in pygame.event.get():
-    if event.type==pygame.QUIT:
-        pygame.quit()
-for event in pygame.event.get():
-    if event.type==pygame.QUIT:
-        pygame.quit()
-screen.fill(WHITE)
-pygame.display.flip()
-pygame.draw.rect(screen,GREEN,[20,20,250,100],2)
-font=pygame.font.SysFont(Calibri, 25,True,False)
-text=font.render("The Forest of Riddles",True,BLUE)
-screen.blit(text,[250,250])
-screen.fill(WHITE)
-pygame.display.flip()
-clock.tick(60)
-for event in pygame.event.get():
-    if event.type==pygame.QUIT:
-        pygame.quit()
-        
-    #IGNORE EVERYTHING BEFORE THIS COMMENT 
-    
-print('Welcome to Wald der Ratsel. Do you want to play?')
+#introduction/instructions
+print('SOME NOTES BEFORE YOU PLAY:')
+print(' ')
+print('Thank you for playing the game I have made for my CPT!')
+print('There are still some parts of the code that I have not')
+print('yet fully fixed, but I hope you will enjoy it anyway.')
+print('Please remember to input your answers in ALL CAPS,')
+print('otherwise your answers will NOT go through.')
+print('Also, for level three please input a/an before your')
+print('answer, or else it will not be accepted.')
+print('Thank you for reading, I hope you enjoy!')
+print(' ')
+print('.....')
+print(' ')
+#opening game statement
+print('Welcome to the Forest of Riddles. Do you want to play?')
 print('Type YES if ready')
 print('Type NO if not ready')
 print(' ')
+#gmae will begin if player inputs YES
 a = input()
 if a == 'YES':
     print(' ')
@@ -67,6 +40,7 @@ if a == 'YES':
     print(' ')
     print('Do you want to go LEFT or RIGHT?')
     print(' ')
+    #storyline changes slightly depending on this choice
     b = input()
     if b == 'LEFT':
         print(' ')
@@ -89,6 +63,7 @@ if a == 'YES':
         print(' ')
         print('Do you want to BRIBE or LEAVE?')
         print(' ')
+        #player will have to input BRIBE to win
         d = input()
         if d == 'BRIBE':
             print(' ')
@@ -103,6 +78,7 @@ if a == 'YES':
             print('LEVEL ONE:')
             print(' "What do you call someone with no body and no nose?" ')
             print(' ')
+            #player can't continue without getting this correct
             e = input()
             if e == 'NOBODY KNOWS':
                 print(' ')
@@ -123,6 +99,7 @@ if a == 'YES':
                 print('LEVEL TWO:')
                 print('Do you want to go LEFT or RIGHT?')
                 print(' ')
+                #explanation: less people are left handed than right
                 f = input()
                 if f == 'LEFT':
                     print(' ')
@@ -136,6 +113,8 @@ if a == 'YES':
                     print(' ')
                     print('Do you want to abandon your journey?')
                     print('Type YES or NO')
+                    #player must input NO if they want to win
+                    #also this is a filler bit I'm too lazy to delete ^
                     print(' ')
                     g = input()
                     if g == 'YES':
@@ -205,8 +184,10 @@ if a == 'YES':
                         print('as it recites its first riddle:')
                         print(' ')
                         print('LEVEL THREE:')
+                        #level three is divided into three sub-levels
                         print(' "I travel all over the world but always stay in one corner,')
                         print('what am I?" ')
+                        #sub-level #1
                         print(' ')
                         h = input()
                         if h == 'A STAMP':
@@ -217,6 +198,7 @@ if a == 'YES':
                             print('next riddle.')
                             print(' ')
                             print('LEVEL THREE:')
+                            #sub-level #2
                             print('I begin with the letter e, end with the letter e, and')
                             print('contain one letter. What am I?')
                             print(' ')
@@ -229,10 +211,11 @@ if a == 'YES':
                                 print('will not let you go unless you can answer one more." ')
                                 print(' ')
                                 print('LEVEL THREE:')
+                                #sub-level #3
                                 print(' "What has thirteen hearts but no other organs?" ')
                                 print(' ')
                                 j = input()
-                                if j == 'DECK OF CARDS':
+                                if j == 'A DECK OF CARDS':
                                     print(' ')
                                     print('The creature stands and speaks:')
                                     print(' "No one has ever answered as wisely as you.')
@@ -266,6 +249,7 @@ if a == 'YES':
                                     print(' ')
                                     print(' ')
                                     print('Thank you for playing...')
+                                    #player has won the game
                             else:
                                 print(' ')
                                 print('The creature stands and speaks:')
@@ -280,6 +264,7 @@ if a == 'YES':
                                 print('enough when you do not have the wits to defeat the')
                                 print('forest of riddles.')
                                 print('GAME OVER')
+                                #player loses if they answer incorrectly
                         else:
                             print(' ')
                             print('The creature stands and speaks:')
@@ -294,6 +279,7 @@ if a == 'YES':
                             print('enough when you do not have the wits to defeat the')
                             print('forest of riddles.')
                             print('GAME OVER')
+                            #player loses if they answer incorrectly
 
                 else:
                     print(' ')
@@ -301,6 +287,7 @@ if a == 'YES':
                     print('have no way of saving yourself and you become one with')
                     print('the forest of riddles.')
                     print('GAME OVER')
+                    #player loses if they choose to go RIGHT
             else:
                 print(' ')
                 print('The old woman laughs in triumph. She speaks:')
@@ -309,12 +296,15 @@ if a == 'YES':
                 print('She closes the door in your face and you are left')
                 print('clueless. You cannot continue without more information.')
                 print('GAME OVER')
+                #player loses if they can't answer the riddle correctly
         elif d == 'LEAVE':
             print(' ')
             print('The woman closes the door in your face. You cannot continue')
             print('without more information.')
             print('GAME OVER')
+            #player can't move on if they choose LEAVE
     elif b == 'RIGHT':
+        #this decision results in a slight story change
         print(' ')
         print('You feel the dirt under your shoes as you walk down')
         print('the path. There are different wildflowers all around')
@@ -336,6 +326,7 @@ if a == 'YES':
         print(' ')
         print('Do you want to BRIBE or LEAVE?')
         print(' ')
+        #player can only proceed if they pick BRIBE
         d = input()
         if d == 'BRIBE':
             print(' ')
@@ -370,6 +361,7 @@ if a == 'YES':
                 print('LEVEL TWO:')
                 print('Do you want to go LEFT or RIGHT?')
                 print(' ')
+                #less people are left handed than right handed
                 f = input()
                 if f == 'LEFT':
                     print(' ')
@@ -384,6 +376,8 @@ if a == 'YES':
                     print('Do you want to abandon your journey?')
                     print('Type YES or NO')
                     print(' ')
+                    #player can only win if they pick no
+                    #also this is a filler bit I'm too lazy to delete ^
                     g = input()
                     if g == 'YES':
                         print(' ')
@@ -452,8 +446,10 @@ if a == 'YES':
                         print('as it recites its first riddle:')
                         print(' ')
                         print('LEVEL THREE:')
+                        #three sub-levels
                         print(' "I travel all over the world but always stay in one corner,')
                         print('what am I?" ')
+                        #sub-level #1
                         print(' ')
                         h = input()
                         if h == 'A STAMP':
@@ -464,6 +460,7 @@ if a == 'YES':
                             print('next riddle.')
                             print(' ')
                             print('LEVEL THREE:')
+                            #sub-level #2
                             print('I begin with the letter e, end with the letter e, and')
                             print('contain one letter. What am I?')
                             print(' ')
@@ -476,10 +473,11 @@ if a == 'YES':
                                 print('will not let you go unless you can answer one more." ')
                                 print(' ')
                                 print('LEVEL THREE:')
+                                #sub-level #3
                                 print(' "What has thirteen hearts but no other organs?" ')
                                 print(' ')
                                 j = input()
-                                if j == 'DECK OF CARDS':
+                                if j == 'A DECK OF CARDS':
                                     print(' ')
                                     print('The creature stands and speaks:')
                                     print(' "No one has ever answered as wisely as you.')
@@ -513,6 +511,7 @@ if a == 'YES':
                                     print(' ')
                                     print(' ')
                                     print('Thank you for playing...')
+                                    #if player chooses everything correctly they win the game
                             else:
                                 print(' ')
                                 print('The creature stands and speaks:')
@@ -527,6 +526,7 @@ if a == 'YES':
                                 print('enough when you do not have the wits to defeat the')
                                 print('forest of riddles.')
                                 print('GAME OVER')
+                                #incorrect answer means the player loses
                         else:
                             print(' ')
                             print('The creature stands and speaks:')
@@ -540,12 +540,14 @@ if a == 'YES':
                             print('you do not have the wits to defeat the forest of')
                             print('riddles.')
                             print('GAME OVER')
+                            #incorrect asnwer means the player loses
                 else:
                     print(' ')
                     print('You decide to go right and fall into quick sand. You')
                     print('have no way of saving yourself and you become one with')
                     print('the forest of riddles.')
                     print('GAME OVER')
+                    #going RIGHT leads to a game over
             else:
                 print(' ')
                 print('The old woman laughs in triumph. She speaks:')
@@ -555,9 +557,13 @@ if a == 'YES':
                 print('She closes the door in your face and you are left')
                 print('clueless. You cannot continue without more information.')
                 print('GAME OVER')
+                #can only continue if the answer is correct
         elif d == 'LEAVE':
             print(' ')
             print('The woman closes the door in your face. You cannot continue')
             print('without more information.')
             print('GAME OVER')
-
+            #player can't proceed without inputing BRIBE
+            
+#this is my game! It's not perfect but I'm okay with how it turned out
+#thank you for playing!
